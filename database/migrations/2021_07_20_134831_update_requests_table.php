@@ -15,8 +15,8 @@ class UpdateRequestsTable extends Migration
     {
         Schema::table('requests', function (Blueprint $table) {
             //
-            $table->unsignedBigInteger('apartments_id')->nullable()->after('id');
-            $table->foreign('apartments_id')->references('id')->on('apartments')->onDelete('set null');
+            $table->unsignedBigInteger('apartment_id')->nullable()->after('id');
+            $table->foreign('apartment_id')->references('id')->on('apartments')->onDelete('set null');
         });
     }
 
@@ -29,8 +29,8 @@ class UpdateRequestsTable extends Migration
     {
         Schema::table('requests', function (Blueprint $table) {
             //
-            $table->dropForeign(['apartments_id']);
-            $table->dropColumn('apartments_id');
+            $table->dropForeign(['apartment_id']);
+            $table->dropColumn('apartment_id');
         });
     }
 }
