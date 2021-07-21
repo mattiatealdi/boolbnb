@@ -1,10 +1,10 @@
 <?php
 
-use App\Apartment_image;
+use App\View;
 use Illuminate\Database\Seeder;
 use Faker\Generator as Faker;
 
-class ApartmentImagesTableSeeder extends Seeder
+class ViewsTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -14,11 +14,9 @@ class ApartmentImagesTableSeeder extends Seeder
     public function run(Faker $faker)
     {
         //
-
         for ($i=0; $i < 10; $i++) {
             # code...
-            $new_apartment_image = new Apartment_image();
-            $new_apartment_image = $faker->imageUrl();
+            $new_view = new View();
         }
 
     }
