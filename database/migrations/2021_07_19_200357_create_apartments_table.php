@@ -23,7 +23,7 @@ class CreateApartmentsTable extends Migration
             $table->float('nightly_price',6,2);
             $table->tinyInteger('bed_number');
             $table->tinyInteger('bathroom_number');
-            $table->string('square_meters',4);
+            $table->smallInteger('square_meters');
             $table->text('description');
             $table->string('country',50);
             $table->string('city',50);
